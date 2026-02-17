@@ -32,7 +32,7 @@ To reduce contention and avoid deadlocks:
 if (philo->id % 2 == 0)
     ft_usleep(philo->time_to_eat / 2);
 ```
-##🚀 Compilation
+## 🚀 Compilation
 ```c
 make
 ./philo number_of_philos time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
