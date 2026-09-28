@@ -2,6 +2,8 @@
 
 A multithreaded implementation of the Dining Philosophers problem in C using **pthreads** and **mutexes**, implementing an even/odd scheduling strategy to prevent deadlocks and reduce fork contention.
 
+![Dining Philosophers](Dining_philosophers_problem.png)
+
 
 
 ## 📌 Project Goal
@@ -32,8 +34,18 @@ To reduce contention and avoid deadlocks:
 if (philo->id % 2 == 0)
     ft_usleep(philo->time_to_eat / 2);
 ```
-## 🚀 Compilation
+## 🚀 Run
 ```c
 make
+
 ./philo number_of_philos time_to_die time_to_eat time_to_sleep [number_of_times_each_philosopher_must_eat]
+
+./ philo 5 20 2 2 100
+```
+
+Testing
+```c
+chmod +x test.sh
+
+./test.sh . 1
 ```
